@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <title>Contact</title>
+        <style>
+        .button {
+	        background-color: rgb(134, 80, 10);	
+	        border: outset ;
+	        color: white;
+	        padding: 15px;
+	        text-align: center;
+	        text-decoration: none;
+	        display: inline-block;
+	        font-size: 16px;
+	        margin: 7px 2px;
+            height: 13px;
+	        border-radius: 20px;
+            
+            } 
+        .btn {
+	        background-color: rgb(46, 34, 19);	
+	        border: outset ;
+	        color: white;
+	        padding: 15px;
+	        text-align: center;
+	        text-decoration: none;
+	        display: inline-block;
+	        font-size: 16px;
+	        margin: 7px 2px;
+            height: 13px;
+	        border-radius: 20px;
+           
+            
+            }                     
+        .box {
+            border-radius: 10px;
+            border: outset ;
+            border-top: 3px solid rgb(36, 36, 90);
+            border-right: 3px solid rgb(36, 36, 90);
+            border-bottom: 3px solid rgb(36, 36, 90);
+            border-left: 3px solid rgb(36, 36, 90);
+            background-color: #ffffff;
+            padding: 20px;
+            width: 260px;
+            display: grid;
+            margin-left: 40px;
+            
+            text-align: center;
+           
+            }
+
+            .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            margin: 50px auto;
+           
+            }
+        body{
+            background-color: #ffebd1;
+            }
+        .navbox{
+            display: flex;
+            top: 20px;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        text-align: center;
+        } 
+            .box:hover{
+                transform: translateY(-5px);
+                transition: transform 0.3s ease;
+            }
+            .btn:hover, .button:hover, {
+               transform: translateY(-5px);
+                transition: transform 0.3s ease;
+            }
+            .box img{
+                object-fit: contain;
+            }
+            .prodbutn{
+            background-color: rgb(23, 68, 128);	
+	        border: outset ;
+	        color: white;
+	        padding: 15px;
+	        text-align: center;
+	        text-decoration: none;
+	        display: inline-block;
+	        font-size: 16px;
+	        margin: 7px 2px;
+            height: 13px;
+	        border-radius: 10px;
+            }
+            .prodbutn:hover{
+            box-shadow: 0px 0 darker;
+            transform: translateY(4px);
+            transition: transform 0.3s ease;
+            }
+            h2{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            margin-bottom: 30px;
+            } 
+        </style>
+        <title>Product</title>
+    </head>
+    <body>
+        
+         <div class="navbox">
+           <a href="index.html" class="button">Home</a>
+            <a href="About.html" class="button">About</a>
+            <a href="Product.html" class="button">Product</a>
+            <a href="Contact.html" class="button">Contact</a>
+            <a href="Login.html" class="btn">Logout</a>
+          </div>
+          <h2>Available Products</h2>
+        <div class="container">
+        <div class="box">
+            <img src="pic1.jpg" alt="gancube" width="220px" height="250px">
+            <p>GAN16 Maglev MAX</p>
+            <p>₱5,419.31</p>
+            <a href="contact.html" class="prodbutn">Buy Now</a>
+        </div>
+
+        <div class="box">
+            <img src="pic2.jpg" alt="tornado" width="208px" height="210px">
+            <p>QY X-Man Tornado V3 M Pioneer UV Coated</p>
+            <p>₱2,232.06</p>
+            <a href="contact.html" class="prodbutn">Buy Now</a>
+        </div>
+
+        <div class="box">
+            <img src="pic3.jpg" alt="muyo" width="208px" height="210px">
+            <p>MoYu RS3 M 2020 3x3 (Magnetic)</p>
+            <p>₱2,232.06</p>
+            <a href="contact.html" class="prodbutn">Buy Now</a>
+        </div>
+
+        <div class="box">
+            <img src="pic4.jpg" alt="gan2x2" width="208px" height="210px">
+            <p>GAN251 M Air</p>
+            <p>₱1,594.41</p>
+            <a href="contact.html" class="prodbutn">Buy Now</a>
+        </div>
+        </div>
+
+    </body>
+</html>

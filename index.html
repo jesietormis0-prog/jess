@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <Style>
+            body{
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-image: linear-gradient(45deg, rgb(255, 214, 194), rgb(7, 20, 59), rgb(255, 216, 179), rgb(15, 23, 56));
+                background-size: 400%;
+                animation: gradient 5s infinite;
+            }
+             @keyframes gradient { 50%{background-position: 100% 50%;}}   
+            
+                
+            
+            .box{
+                background-color: bisque;
+                padding: 60px;
+                border-radius: 15px;
+                text-align: center;
+                width: 600px;
+                border: outset ;
+                border-top: 3px solid rgb(36, 36, 90);
+                border-right: 3px solid rgb(36, 36, 90);
+                border-bottom: 3px solid rgb(36, 36, 90);
+                border-left: 3px solid rgb(36, 36, 90);
+            }
+            .Home{
+                color: ;
+                padding: 15px;
+                width: 150px;
+                margin: 8px 0;
+                border: 1px solid black;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+            .button {
+	            background-color: rgb(134, 80, 10);	
+	            border: outset ;
+	            color: white;
+	            padding: 15px;
+	            text-align: center;
+	            text-decoration: none;
+	            display: inline-block;
+	            font-size: 16px;
+	            margin: 7px 2px;
+                height: 13px;
+	            border-radius: 20px;
+            }
+             .btn {
+	            background-color: rgb(46, 34, 19);	
+	            border: outset ;
+	            color: white;
+	            padding: 15px;
+	            text-align: center;
+	            text-decoration: none;
+	            display: inline-block;
+	            font-size: 16px;
+	            margin: 7px 2px;
+                height: 13px;
+	            border-radius: 20px;
+            }
+            .h2{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+              justify-content: flex-start;
+            }
+             .p{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;
+            }
+            .btn:hover, .button:hover {
+               transform: translateY(-5px);
+                transition: transform 0.3s ease;
+            }
+            
+        </Style>
+        <title>Homepage</title>
+    </head>
+    <body>
+        <div class="box">
+        <h2>Hi, Welcome to my Homepage</h2>
+        <p>"The cube is a perfect metaphor for life. It's complex, it's challenging, but it can be solved."<br>- <em>Ernő Rubik</em></p>
+        
+
+        <div class="navbox">
+           <a href="index.html" class="button">Home</a>
+            <a href="About.html" class="button">About</a>
+            <a href="Product.html" class="button">Product</a>
+            <a href="Contact.html" class="button">Contact</a>
+        </div>
+        
+            <a href="Login.html" class="btn">Logout</a>
+        
+        </div>
+
+    </body>
+</html>
+    
