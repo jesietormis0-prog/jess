@@ -35,7 +35,7 @@
         }
 
         .container {
-            background-color: rgb(252, 226, 206);
+            background-color: rgba(252, 226, 206, 0.37);
 
             padding: 30px;
             border-radius: 15px;
@@ -46,7 +46,7 @@
             width: 100%;
             max-width: 360px;
 
-            border: 2px outset rgb(36, 36, 90);
+            border: 3px outset rgb(0, 0, 0);
         }
 
         .container h2 {
@@ -127,21 +127,10 @@
         <h2>Login Form</h2>
 
         <form onsubmit="return validateForm()">
-            <input
-                type="text"
-                id="username"
-                name="username"
-                placeholder="Enter Username"
-                required
-            >
+            <input type="text" id="username" name="username" placeholder="Enter Username"
+                required>
 
-            <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Enter Password"
-                required
-            >
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
 
             <input type="submit" value="Login">
         </form>
