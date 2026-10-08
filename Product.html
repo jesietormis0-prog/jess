@@ -1,154 +1,235 @@
-<html>
-    <head>
-        <title>Contact</title>
-        <style>
-        .button {
-	        background-color: rgb(134, 80, 10);	
-	        border: outset ;
-	        color: white;
-	        padding: 15px;
-	        text-align: center;
-	        text-decoration: none;
-	        display: inline-block;
-	        font-size: 16px;
-	        margin: 7px 2px;
-            height: 13px;
-	        border-radius: 20px;
-            
-            } 
-        .btn {
-	        background-color: rgb(46, 34, 19);	
-	        border: outset ;
-	        color: white;
-	        padding: 15px;
-	        text-align: center;
-	        text-decoration: none;
-	        display: inline-block;
-	        font-size: 16px;
-	        margin: 7px 2px;
-            height: 13px;
-	        border-radius: 20px;
-           
-            
-            }                     
-        .box {
-            border-radius: 10px;
-            border: outset ;
-            border-top: 3px solid rgb(36, 36, 90);
-            border-right: 3px solid rgb(36, 36, 90);
-            border-bottom: 3px solid rgb(36, 36, 90);
-            border-left: 3px solid rgb(36, 36, 90);
-            background-color: #ffffff;
-            padding: 20px;
-            width: 260px;
-            display: grid;
-            margin-left: 40px;
-            
-            text-align: center;
-           
-            }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
 
-            .container{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            width: 100%;
-            margin: 50px auto;
-           
-            }
-        body{
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
             background-color: #ffebd1;
+            background-image: linear-gradient(
+                45deg,
+                rgb(255, 214, 194),
+                rgb(7, 20, 59),
+                rgb(255, 216, 179),
+                rgb(15, 23, 56)
+            );
+            background-size: 400%;
+            animation: gradient 7s infinite;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        @keyframes gradient {
+            50% {
+                background-position: 100% 50%;
             }
-        .navbox{
+        }
+
+        
+        .navbox {
             display: flex;
-            top: 20px;
             gap: 10px;
             justify-content: center;
             align-items: center;
+            padding-top: 20px;
+            flex-wrap: wrap;
         }
-        p{
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        text-align: center;
-        } 
-            .box:hover{
-                transform: translateY(-5px);
-                transition: transform 0.3s ease;
-            }
-            .btn:hover, .button:hover, {
-               transform: translateY(-5px);
-                transition: transform 0.3s ease;
-            }
-            .box img{
-                object-fit: contain;
-            }
-            .prodbutn{
-            background-color: rgb(23, 68, 128);	
-	        border: outset ;
-	        color: white;
-	        padding: 15px;
-	        text-align: center;
-	        text-decoration: none;
-	        display: inline-block;
-	        font-size: 16px;
-	        margin: 7px 2px;
-            height: 13px;
-	        border-radius: 10px;
-            }
-            .prodbutn:hover{
-            box-shadow: 0px 0 darker;
-            transform: translateY(4px);
-            transition: transform 0.3s ease;
-            }
-            h2{
+
+        
+        .button,
+        .btn {
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 7px 2px;
+            border-radius: 10px;
+            border: 2px outset;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .button {
+            background-color: rgb(134, 80, 10);
+        }
+
+        .btn {
+            background-color: rgb(46, 34, 19);
+        }
+
+        .button:hover,
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        
+        h2 {
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 30px;
-            margin-bottom: 30px;
-            } 
-        </style>
-        <title>Product</title>
-    </head>
-    <body>
+            margin: 35px 0 30px;
+            color: white;
+        }
+
         
-         <div class="navbox">
-           <a href="index.html" class="button">Home</a>
-            <a href="About.html" class="button">About</a>
-            <a href="Product.html" class="button">Product</a>
-            <a href="Contact.html" class="button">Contact</a>
-            <a href="Login.html" class="btn">Logout</a>
-          </div>
-          <h2>Available Products</h2>
-        <div class="container">
-        <div class="box">
-            <img src="pic1.jpg" alt="gancube" width="220px" height="250px">
-            <p>GAN16 Maglev MAX</p>
-            <p>₱5,419.31</p>
-            <a href="contact.html" class="prodbutn">Buy Now</a>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        
+        .box {
+            border-radius: 10px;
+            border: 3px solid rgb(36, 36, 90);
+            background-color: #ffffff;
+            padding: 20px;
+            width: 260px;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        
+        .box img {
+            object-fit: contain;
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+        
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            text-align: center;
+            margin: 8px 0;
+        }
+
+        
+        .price {
+            font-weight: bold;
+            color: rgb(23, 68, 128);
+            font-size: 20px;
+        }
+
+        
+        .prodbutn {
+            background-color: rgb(23, 68, 128);
+            border: 2px outset;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px auto 0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .prodbutn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        
+        @media (max-width: 600px) {
+            .navbox {
+                gap: 5px;
+                padding: 15px 10px;
+            }
+
+            .button,
+            .btn {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+
+            .box {
+                width: 90%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+	<div class="navbox">
+        <a href="index.html" class="button">Home</a>
+        <a href="About.html" class="button">About</a>
+        <a href="Product.html" class="button">Product</a>
+        <a href="Contact.html" class="button">Contact</a>
+        <a href="login.html" class="btn">Logout</a>
+    </div>
+
+    
+    <h2>Available Products</h2>
+		<div class="container">
+			
+		<div class="box">
+            <img src="pic1.jpg" alt="GAN16 Maglev MAX" width="220" height="250">
+			<p>GAN16 Maglev MAX</p>
+			<p class="price">₱5,419.31</p>
+			<a href="Contact.html" class="prodbutn">Buy Now</a>
         </div>
 
-        <div class="box">
-            <img src="pic2.jpg" alt="tornado" width="208px" height="210px">
-            <p>QY X-Man Tornado V3 M Pioneer UV Coated</p>
-            <p>₱2,232.06</p>
-            <a href="contact.html" class="prodbutn">Buy Now</a>
+       <div class="box">
+        	<img src="pic2.jpg" alt="QY X-Man Tornado V3 M Pioneer UV Coated" width="208" height="210">
+		   <p>QY X-Man Tornado V3 M Pioneer UV Coated</p>
+		   <p class="price">₱2,232.06</p>
+		   <a href="Contact.html" class="prodbutn">Buy Now</a>
         </div>
 
+        
         <div class="box">
-            <img src="pic3.jpg" alt="muyo" width="208px" height="210px">
-            <p>MoYu RS3 M 2020 3x3 (Magnetic)</p>
-            <p>₱2,232.06</p>
-            <a href="contact.html" class="prodbutn">Buy Now</a>
+            <img src="pic3.jpg" alt="MoYu RS3 M 2020 3x3 Magnetic" width="208" height="210">
+			<p>MoYu RS3 M 2020 3x3 (Magnetic)</p>
+			<p class="price">₱2,232.06</p>
+			<a href="Contact.html" class="prodbutn">Buy Now</a>
         </div>
 
+        
         <div class="box">
-            <img src="pic4.jpg" alt="gan2x2" width="208px" height="210px">
-            <p>GAN251 M Air</p>
-            <p>₱1,594.41</p>
-            <a href="contact.html" class="prodbutn">Buy Now</a>
-        </div>
+            <img src="pic4.jpg" alt="GAN251 M Air" width="208" height="210">
+			<p>GAN251 M Air</p>
+			<p class="price">₱1,594.41</p>
+			<a href="Contact.html" class="prodbutn">Buy Now</a>
         </div>
 
-    </body>
+    </div>
+
+</body>
 </html>
