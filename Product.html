@@ -32,17 +32,16 @@
             }
         }
 
-        
+       
         .navbox {
             display: flex;
             gap: 10px;
             justify-content: center;
             align-items: center;
-            padding-top: 20px;
+            padding: 20px 10px;
             flex-wrap: wrap;
         }
 
-        
         .button,
         .btn {
             color: white;
@@ -72,28 +71,38 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        
-        h2 {
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 30px;
-            margin: 35px 0 30px;
-            color: white;
-        }
-
-        
+       
         .container {
+            border-radius: 10px;
+            background-color: #fddeb6;
+            padding: 30px;
+            width: 70%;
+            margin: 0 auto;
+
+            border: 3px solid rgb(36, 36, 90);
+
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 25px;
-            width: 100%;
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 0 20px;
+            align-items: center;
+            gap: 20px;
         }
 
         
+        .container h2 {
+            flex-basis: 100%;
+            width: 100%;
+
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+
+            margin: 0 0 10px;
+
+            color: rgb(36, 36, 90);
+        }
+
+       
         .box {
             border-radius: 10px;
             border: 3px solid rgb(36, 36, 90);
@@ -101,11 +110,14 @@
             padding: 20px;
             width: 260px;
             min-height: 400px;
+
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
+
             text-align: center;
+
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -114,14 +126,14 @@
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         }
 
-        
+      
         .box img {
             object-fit: contain;
             max-width: 100%;
             margin-bottom: 10px;
         }
 
-        
+       
         p {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 18px;
@@ -129,7 +141,7 @@
             margin: 8px 0;
         }
 
-        
+       
         .price {
             font-weight: bold;
             color: rgb(23, 68, 128);
@@ -149,6 +161,7 @@
             margin: 10px auto 0;
             border-radius: 10px;
             cursor: pointer;
+
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -157,8 +170,9 @@
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
         }
 
-        
+       
         @media (max-width: 600px) {
+
             .navbox {
                 gap: 5px;
                 padding: 15px 10px;
@@ -170,12 +184,15 @@
                 padding: 8px 12px;
             }
 
-            h2 {
-                font-size: 25px;
+            .container {
+                width: 95%;
+                padding: 15px 10px;
+                gap: 15px;
             }
 
-            .container {
-                padding: 0 10px;
+            .container h2 {
+                font-size: 25px;
+                margin: 5px 0 10px;
             }
 
             .box {
@@ -187,7 +204,9 @@
 </head>
 
 <body>
-	<div class="navbox">
+
+    
+    <div class="navbox">
         <a href="index.html" class="button">Home</a>
         <a href="About.html" class="button">About</a>
         <a href="Product.html" class="button">Product</a>
@@ -195,38 +214,87 @@
         <a href="login.html" class="btn">Logout</a>
     </div>
 
+
     
-    <h2>Available Products</h2>
-		<div class="container">
-			
-		<div class="box">
-            <img src="pic1.jpg" alt="GAN16 Maglev MAX" width="220" height="250">
-			<p>GAN16 Maglev MAX</p>
-			<p class="price">₱5,419.31</p>
-			<a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
+    <div class="container">
 
-       <div class="box">
-        	<img src="pic2.jpg" alt="QY X-Man Tornado V3 M Pioneer UV Coated" width="208" height="210">
-		   <p>QY X-Man Tornado V3 M Pioneer UV Coated</p>
-		   <p class="price">₱2,232.06</p>
-		   <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
+       
+        <h2>Available Products</h2>
+
 
         
         <div class="box">
-            <img src="pic3.jpg" alt="MoYu RS3 M 2020 3x3 Magnetic" width="208" height="210">
-			<p>MoYu RS3 M 2020 3x3 (Magnetic)</p>
-			<p class="price">₱2,232.06</p>
-			<a href="Contact.html" class="prodbutn">Buy Now</a>
+            <img 
+                src="pic1.jpg" 
+                alt="GAN16 Maglev MAX" 
+                width="220" 
+                height="250"
+            >
+
+            <p>GAN16 Maglev MAX</p>
+
+            <p class="price">₱5,419.31</p>
+
+            <a href="Contact.html" class="prodbutn">
+                Buy Now
+            </a>
         </div>
+
+
+       
+        <div class="box">
+            <img 
+                src="pic2.jpg" 
+                alt="QY X-Man Tornado V3 M Pioneer UV Coated" 
+                width="208" 
+                height="210"
+            >
+
+            <p>QY X-Man Tornado V3 M Pioneer UV Coated</p>
+
+            <p class="price">₱2,232.06</p>
+
+            <a href="Contact.html" class="prodbutn">
+                Buy Now
+            </a>
+        </div>
+
 
         
         <div class="box">
-            <img src="pic4.jpg" alt="GAN251 M Air" width="208" height="210">
-			<p>GAN251 M Air</p>
-			<p class="price">₱1,594.41</p>
-			<a href="Contact.html" class="prodbutn">Buy Now</a>
+            <img 
+                src="pic3.jpg" 
+                alt="MoYu RS3 M 2020 3x3 Magnetic" 
+                width="208" 
+                height="210"
+            >
+
+            <p>MoYu RS3 M 2020 3x3 (Magnetic)</p>
+
+            <p class="price">₱2,232.06</p>
+
+            <a href="Contact.html" class="prodbutn">
+                Buy Now
+            </a>
+        </div>
+
+
+        
+        <div class="box">
+            <img 
+                src="pic4.jpg" 
+                alt="GAN251 M Air" 
+                width="208" 
+                height="210"
+            >
+
+            <p>GAN251 M Air</p>
+
+            <p class="price">₱1,594.41</p>
+
+            <a href="Contact.html" class="prodbutn">
+                Buy Now
+            </a>
         </div>
 
     </div>
