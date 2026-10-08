@@ -1,109 +1,198 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <Style>
-            body{
-                background-size: cover;
-                background-position: center;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                margin: 0;
-                background-image: linear-gradient(45deg, rgb(255, 214, 194), rgb(7, 20, 59), rgb(255, 216, 179), rgb(15, 23, 56));
-                background-size: 400%;
-                animation: gradient 5s infinite;
-            }
-             @keyframes gradient { 50%{background-position: 100% 50%;}}   
-            
-                
-            .box{
-                background-color: bisque;
-                padding: 60px;
-                border-radius: 20px;
-                text-align: center;
-                width: 380px;
-                justify-content: center;
-                align-items: center;
-                border: outset ;
-                border-top: 3px solid rgb(36, 36, 90);
-                border-right: 3px solid rgb(36, 36, 90);
-                border-bottom: 3px solid rgb(36, 36, 90);
-                border-left: 3px solid rgb(36, 36, 90);
-                
-                
-            }
-            .button {
-	            background-color: rgb(134, 80, 10);	
-	            border: outset ;
-	            color: white;
-	            padding: 15px;
-	            text-align: center;
-	            text-decoration: none;
-	            display: inline-block;
-	            font-size: 16px;
-	            margin: 7px 2px;
-                height: 13px;
-	            border-radius: 20px;
-            
-            }
-             .btn {
-	            background-color: rgb(46, 34, 19);	
-	            border: outset ;
-	            color: white;
-	            padding: 15px;
-	            text-align: center;
-	            text-decoration: none;
-	            display: inline-block;
-	            font-size: 16px;
-	            margin: 7px 2px;
-                height: 13px;
-	            border-radius: 20px;
-            }
-            p{
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 20px;
-                margin-top: 0%;
-                margin-bottom: 20px;
-                
-              
-            }
-            img{
-            border-radius: 20px;
-            margin-bottom: 20px;
-	        }
-            .img {
-            display: flex; 
-            }
-            .btn:hover, .button:hover {
-                transform: translateY(-5px);
-                transition: transform 0.3s ease;
-            }	
-            h2{
-                text-align: center;
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 30px;
-            } 
-        </Style>
-        <title>About</title>
-    </head>
-    <body>
-        <div class="box">
-    
-        <div class="navbox">
-            <h2>About this Website</h2>
-            <p>This website sells high-quality Rubik's cubes designed for comfort, and a long-term use. Smooth, durable, and perfect for all skill level. </p>
-            <img src="pic1.gif" alt="gym cat" width="400" height="350">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
 
-           <a href="index.html" class="button">Home</a>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-size: 400%;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+
+            background-image: linear-gradient(
+                45deg,
+                rgb(255, 214, 194),
+                rgb(7, 20, 59),
+                rgb(255, 216, 179),
+                rgb(15, 23, 56)
+            );
+
+            animation: gradient 5s infinite;
+        }
+
+        @keyframes gradient {
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .box {
+            background-color: bisque;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            width: 90%;
+            max-width: 900px;
+
+            border: 3px solid rgb(36, 36, 90);
+        }
+
+        h2 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            margin-top: 0;
+        }
+
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+
+        .about-content img {
+            width: 45%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        .about-text {
+            width: 50%;
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .button {
+            background-color: rgb(134, 80, 10);
+            border: outset;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 7px 2px;
+            border-radius: 20px;
+        }
+
+        .btn {
+            background-color: rgb(46, 34, 19);
+            border: outset;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 15px 2px 0;
+            border-radius: 20px;
+        }
+
+        .btn:hover,
+        .button:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+
+        
+        @media (max-width: 700px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .box {
+                width: 100%;
+                padding: 25px 15px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+
+            .about-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .about-content img {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .text {
+                width: 100%;
+            }
+
+            p {
+                font-size: 17px;
+            }
+
+            .button {
+                font-size: 14px;
+                padding: 12px;
+                margin: 5px 2px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h2>About this Website</h2>
+
+        <div class="about-content">
+
+            <img src="pic1.gif" alt="Rubik's cube">
+
+            <div class="text">
+                <p>
+                    Our website offers high-quality Rubik’s cubes designed for comfort, smooth performance, and long-term use.<br> 
+                    Each cube is made with durable materials to ensure reliable performance and a satisfying solving experience.<br> 
+                    Whether you are a beginner or an experienced speedcuber, our cubes are designed to meet your needs. Enjoy fast, <br>
+                    precise, and effortless turns with every move. Choose our Rubik’s cubes and take your solving experience to the next level.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="navbox">
+            <a href="index.html" class="button">Home</a>
             <a href="About.html" class="button">About</a>
             <a href="Product.html" class="button">Product</a>
             <a href="Contact.html" class="button">Contact</a>
         </div>
-        
-            <a href="login.html" class="btn">Logout</a>
 
-        </div>
+        <a href="login.html" class="btn">Logout</a>
 
-    </body>
+    </div>
+
+</body>
 </html>
-    
