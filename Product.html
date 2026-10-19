@@ -18,7 +18,7 @@
             color: #1e293b;
         }
 
-        /* Navigation Bar - Same as Home and About */
+        /* Navigation Bar */
         .navbox {
             display: flex;
             gap: 12px;
@@ -30,15 +30,22 @@
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
         }
 
+        /* Equal Navigation Button Sizes */
         .button,
         .btn {
+            box-sizing: border-box;
+            width: 100px;
+            height: 40px;
+            padding: 0;
+            margin: 4px 2px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
             color: #ffffff;
-            padding: 10px 20px;
             text-align: center;
             text-decoration: none;
-            display: inline-block;
+            font-family: Arial, Helvetica, sans-serif;
             font-size: 16px;
-            margin: 4px 2px;
             border-radius: 8px;
             border: 1px solid #475569;
             cursor: pointer;
@@ -49,15 +56,15 @@
             background-color: #334155;
         }
 
-        .btn {
-            background-color: #b91c1c;
-            border-color: #b91c1c;
-        }
-
         .button:hover {
             background-color: #2563eb;
             transform: translateY(-3px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn {
+            background-color: #b91c1c;
+            border-color: #b91c1c;
         }
 
         .btn:hover {
@@ -165,7 +172,7 @@
         }
 
         /* Mobile Responsive Design */
-        @media (max-width: 600px) {
+        @media screen and (max-width: 600px) {
             .navbox {
                 gap: 5px;
                 padding: 12px 8px;
@@ -173,8 +180,11 @@
 
             .button,
             .btn {
+                width: 85px;
+                height: 36px;
                 font-size: 14px;
-                padding: 8px 12px;
+                padding: 0;
+                margin: 3px 1px;
             }
 
             .container {
@@ -200,11 +210,20 @@
             }
         }
 
-        @media (max-width: 350px) {
+        @media screen and (max-width: 350px) {
             .button,
             .btn {
+                width: 75px;
+                height: 34px;
                 font-size: 13px;
-                padding: 8px 10px;
+            }
+
+            .container {
+                padding: 15px 8px;
+            }
+
+            .container h2 {
+                font-size: 23px;
             }
         }
     </style>
