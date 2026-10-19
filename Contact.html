@@ -1,8 +1,8 @@
+```html
 <!DOCTYPE html>
 <html>
 <head>
     <title>Contact</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -11,194 +11,180 @@
         }
 
         body {
-            background-size: 400%;
-            background-position: center;
+            background-color: #f1f5f9;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #1e293b;
+        }
+
+        /* Navigation Bar */
+        .navbox {
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-            background-image: linear-gradient(
-                45deg,
-                rgb(255, 214, 194),
-                rgb(7, 20, 59),
-                rgb(255, 216, 179),
-                rgb(15, 23, 56)
-            );
-            animation: gradient 5s infinite;
-            font-family: Arial, Helvetica, sans-serif;
+            flex-wrap: wrap;
+            gap: 10px;
+            background-color: #172554;
+            padding: 18px 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
         }
 
-        @keyframes gradient {
-            50% {
-                background-position: 100% 50%;
-            }
+        .button,
+        .btn {
+            border: 1px solid #475569;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease,
+                        transform 0.3s ease;
         }
 
-     
+        .button {
+            background-color: #334155;
+        }
+
+        .button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .btn {
+            background-color: #b91c1c;
+            border-color: #b91c1c;
+        }
+
+        .btn:hover {
+            background-color: #991b1b;
+            transform: translateY(-2px);
+        }
+
+        /* Contact Form Container */
         .container {
-            width: 100%;
+            width: 92%;
             max-width: 650px;
-            border-radius: 10px;
-            background-color: #fddeb6;
-            padding: 25px;
-            border: 3px outset rgb(36, 36, 90);
+            margin: 40px auto;
+            padding: 35px;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(15, 23, 42, 0.08);
         }
 
         h2 {
             text-align: center;
             font-size: 30px;
+            color: #172554;
             margin-top: 0;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
-        
         label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 7px;
             font-weight: bold;
+            color: #334155;
         }
 
-        input[type=text],
+        input[type="text"],
         select,
         textarea {
             width: 100%;
             padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            resize: vertical;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            margin-bottom: 20px;
             font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            color: #1e293b;
+        }
+
+        input[type="text"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
         }
 
         textarea {
             min-height: 150px;
+            resize: vertical;
         }
 
-        input[type=submit] {
-            background-color: #04AA6D;
+        input[type="submit"] {
+            background-color: #1d4ed8;
             color: white;
-            padding: 12px 25px;
+            padding: 12px 30px;
             border: none;
-            border-radius: 4px;
+            border-radius: 7px;
             cursor: pointer;
             font-size: 16px;
+            transition: background-color 0.3s ease;
         }
 
-        input[type=submit]:hover {
-            background-color: #45a049;
+        input[type="submit"]:hover {
+            background-color: #1e40af;
         }
 
-        
-        .navbox {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 5px;
-            margin-top: 25px;
-        }
-
-        .button {
-            background-color: rgb(134, 80, 10);
-            border: outset;
-            color: white;
-            padding: 12px 15px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            border-radius: 20px;
-            transition: transform 0.3s ease;
-        }
-
-       
+        /* Logout */
         .Logout {
             display: flex;
             justify-content: center;
-            margin-top: 15px;
+            margin-top: 25px;
         }
 
-        .btn {
-            background-color: rgb(46, 34, 19);
-            border: outset;
-            color: white;
-            padding: 12px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            border-radius: 20px;
-            transition: transform 0.3s ease;
-        }
-
-        .btn:hover,
-        .button:hover {
-            transform: translateY(-5px);
-        }
-
-       
+        /* Mobile Responsive */
         @media screen and (max-width: 600px) {
-
-            body {
-                padding: 10px;
-                align-items: flex-start;
-                padding-top: 20px;
-            }
-
-            .container {
-                width: 100%;
-                padding: 18px;
-            }
-
-            h2 {
-                font-size: 25px;
-            }
-
-            input[type=text],
-            select,
-            textarea {
-                font-size: 16px;
-            }
-
             .navbox {
-                flex-direction: column;
-                align-items: stretch;
                 gap: 8px;
+                padding: 15px 10px;
             }
 
             .button {
-                width: 100%;
-                text-align: center;
-                padding: 12px;
+                flex: 1 1 40%;
+                padding: 11px 8px;
+                font-size: 14px;
             }
 
-            .Logout {
-                margin-top: 15px;
+            .container {
+                width: 94%;
+                margin: 25px auto;
+                padding: 22px 18px;
+            }
+
+            h2 {
+                font-size: 26px;
+                margin-bottom: 25px;
             }
 
             .btn {
                 width: 100%;
-                text-align: center;
+            }
+
+            input[type="text"],
+            select,
+            textarea {
+                font-size: 16px;
             }
         }
 
-        
         @media screen and (max-width: 350px) {
-
             .container {
-                padding: 12px;
+                padding: 16px 12px;
             }
 
             h2 {
-                font-size: 22px;
+                font-size: 23px;
             }
 
-            input[type=text],
-            select,
-            textarea {
-                padding: 10px;
+            .button {
+                font-size: 13px;
             }
         }
     </style>
@@ -206,18 +192,28 @@
 
 <body>
 
+    <!-- Navigation Bar -->
+    <div class="navbox">
+        <a href="index.html" class="button">Home</a>
+        <a href="About.html" class="button">About</a>
+        <a href="Product.html" class="button">Product</a>
+        <a href="Contact.html" class="button">Contact</a>
+        <a href="Login.html" class="btn">Logout</a>
+    </div>
+
+    <!-- Contact Form -->
     <div class="container">
 
-        <h2>Contact</h2>
+        <h2>Contact Us</h2>
 
-        <form action="action_page.php">
+        <form action="action_page.php" method="post">
 
             <label for="fname">First Name</label>
             <input
                 type="text"
                 id="fname"
                 name="firstname"
-                placeholder="Your name.."
+                placeholder="Enter your first name"
             >
 
             <label for="lname">Last Name</label>
@@ -225,10 +221,10 @@
                 type="text"
                 id="lname"
                 name="lastname"
-                placeholder="Your last name.."
+                placeholder="Enter your last name"
             >
 
-            <label for="country">Country</label>
+            <label for="country">Country / Location</label>
             <select id="country" name="country">
                 <option value="Resthouse">Resthouse</option>
                 <option value="Lantungan">Lantungan</option>
@@ -239,7 +235,7 @@
             <textarea
                 id="subject"
                 name="subject"
-                placeholder="Write something.."
+                placeholder="Write your message here..."
             ></textarea>
 
             <div style="text-align: center;">
@@ -248,18 +244,8 @@
 
         </form>
 
-        <div class="navbox">
-            <a href="index.html" class="button">Home</a>
-            <a href="About.html" class="button">About</a>
-            <a href="Product.html" class="button">Product</a>
-            <a href="Contact.html" class="button">Contact</a>
-        </div>
-
-        <div class="Logout">
-            <a href="Login.html" class="btn">Logout</a>
-        </div>
-
     </div>
 
 </body>
 </html>
+```
