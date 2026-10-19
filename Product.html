@@ -1,9 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products | Cube Store</title>
+
+    <title>Login Form</title>
 
     <style>
         * {
@@ -18,7 +20,7 @@
             color: #1e293b;
         }
 
-        /* Navigation Bar */
+        /* Navigation Bar - Same as Home and About */
         .navbox {
             display: flex;
             gap: 12px;
@@ -30,6 +32,7 @@
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
         }
 
+        /* Navigation Buttons */
         .button,
         .btn {
             color: #ffffff;
@@ -66,105 +69,91 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* Main Product Container */
-        .container {
-            border-radius: 12px;
-            background-color: #ffffff;
-            padding: 40px 25px;
-            width: 92%;
-            max-width: 1400px;
-            margin: 30px auto;
-            border: 1px solid #e2e8f0;
-
+        /* Login Form Position */
+        .login-wrapper {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            align-items: stretch;
-            gap: 20px;
-        }
-
-        /* Page Heading */
-        .container h2 {
-            flex-basis: 100%;
-            width: 100%;
-            text-align: center;
-            font-size: 30px;
-            margin: 0 0 15px;
-            color: #172554;
-        }
-
-        /* Product Cards */
-        .box {
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            background-color: #ffffff;
-            padding: 20px;
-            width: 260px;
-            min-height: 400px;
-
-            display: flex;
-            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            min-height: calc(100vh - 75px);
+            padding: 30px 20px;
+        }
+
+        /* Login Container */
+        .container {
+            background-color: #ffffff;
+            padding: 35px 30px;
+            border-radius: 12px;
             text-align: center;
-
-            transition: transform 0.3s ease,
-                        box-shadow 0.3s ease,
-                        border-color 0.3s ease;
-        }
-
-        .box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(23, 37, 84, 0.12);
-            border-color: #93c5fd;
-        }
-
-        /* Product Images */
-        .box img {
             width: 100%;
-            max-width: 208px;
-            height: 210px;
-            object-fit: contain;
-            margin-bottom: 10px;
+            max-width: 380px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.12);
         }
 
-        /* Product Names */
-        .box p {
-            font-size: 17px;
-            line-height: 1.5;
-            text-align: center;
+        .container h2 {
+            color: #172554;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 14px;
+            margin-top: -18px;
+            margin-bottom: 25px;
+        }
+
+        /* Username and Password Fields */
+        input[type="text"],
+        input[type="password"] {
+            padding: 14px;
+            width: 100%;
             margin: 8px 0;
-            color: #334155;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            font-size: 16px;
+            background-color: #f8fafc;
+            color: #1e293b;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
         }
 
-        /* Product Prices */
-        .price {
-            font-weight: bold;
-            color: #1d4ed8 !important;
-            font-size: 20px !important;
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+            background-color: #ffffff;
         }
 
-        /* Buy Now Buttons */
-        .prodbutn {
-            background-color: #1d4ed8;
+        input::placeholder {
+            color: #94a3b8;
+        }
+
+        /* Login Button */
+        input[type="submit"] {
+            padding: 13px;
+            width: 100%;
+            margin-top: 18px;
             border: none;
+            border-radius: 8px;
+            background-color: #1d4ed8;
             color: #ffffff;
-            padding: 11px 22px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
             font-size: 16px;
             font-weight: bold;
-            margin: 10px auto 0;
-            border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
-        .prodbutn:hover {
+        input[type="submit"]:hover {
             background-color: #1e40af;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            color: #64748b;
+            font-size: 13px;
+            margin-top: 25px;
         }
 
         /* Mobile Responsive Design */
@@ -180,26 +169,23 @@
                 padding: 8px 12px;
             }
 
+            .login-wrapper {
+                min-height: calc(100vh - 60px);
+                padding: 25px 15px;
+            }
+
             .container {
-                width: 95%;
-                padding: 20px 10px;
-                margin: 15px auto;
-                gap: 15px;
+                padding: 28px 20px;
             }
 
             .container h2 {
-                font-size: 25px;
-                margin: 5px 0 10px;
+                font-size: 26px;
+                margin-bottom: 28px;
             }
 
-            .box {
-                width: 100%;
-                max-width: 320px;
-                min-height: 380px;
-            }
-
-            .box img {
-                height: 210px;
+            input[type="text"],
+            input[type="password"] {
+                padding: 13px;
             }
         }
     </style>
@@ -207,162 +193,71 @@
 
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Centered Navigation Bar -->
     <div class="navbox">
         <a href="index.html" class="button">Home</a>
         <a href="About.html" class="button">About</a>
         <a href="Product.html" class="button">Product</a>
         <a href="Contact.html" class="button">Contact</a>
-        <a href="login.html" class="btn">Logout</a>
+        <a href="Login.html" class="btn">Logout</a>
     </div>
 
-    <!-- Product Container -->
-    <div class="container">
+    <!-- Login Form -->
+    <div class="login-wrapper">
+        <div class="container">
 
-        <h2>Available Products</h2>
+            <h2>Welcome Back</h2>
+            <p class="subtitle">Log in to your account</p>
 
-        <div class="box">
-            <img src="pic1.jpg" alt="GAN16 Maglev MAX">
-            <p>GAN16 Maglev MAX</p>
-            <p class="price">₱5,419.31</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
+            <form onsubmit="return validateForm()">
+
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter Username"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter Password"
+                    required
+                >
+
+                <input type="submit" value="Login">
+
+            </form>
+
+            <p class="footer">Rubik's Cube Store</p>
+
         </div>
-
-        <div class="box">
-            <img src="pic2.jpg" alt="QY X-Man Tornado V3 M Pioneer UV Coated">
-            <p>QY X-Man Tornado V3 M Pioneer UV Coated</p>
-            <p class="price">₱2,232.06</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
-
-        <div class="box">
-            <img src="pic3.jpg" alt="MoYu RS3 M 2020 3x3 Magnetic">
-            <p>MoYu RS3 M 2020 3x3 (Magnetic)</p>
-            <p class="price">₱2,232.06</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
-
-        <div class="box">
-            <img src="pic4.jpg" alt="GAN251 M Air 2x2">
-            <p>GAN251 M Air 2x2</p>
-            <p class="price">₱1,594.41</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
-
-        <div class="box">
-            <img src="pic5.jpg" alt="MoYu MeiLong 2x2">
-            <p>MoYu MeiLong 2x2</p>
-            <p class="price">₱312.00</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
-
-        <div class="box">
-            <img src="pic6.jpg" alt="MoYu MeiLong 4x4 Magnetic">
-            <p>MoYu MeiLong 4x4 (Magnetic)</p>
-            <p class="price">₱764.45</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
-
-        <div class="box">
-            <img src="pic7.jpg" alt="QiYi M Pro 4x4 Magnetic">
-            <p>QiYi M Pro 4x4 (Magnetic)</p>
-            <p class="price">₱956.99</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
-
-        <div class="box">
-            <img src="pic8.jpg" alt="QiYi QiMing S3 Pyraminx">
-            <p>QiYi QiMing S3 Pyraminx</p>
-            <p class="price">₱378.99</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
-
-        <div class="box">
-            <img src="pic9.jpg" alt="MoYu WeiLong Pyraminx Magnetic">
-            <p>MoYu WeiLong Pyraminx (Magnetic)</p>
-            <p class="price">₱956.99</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
-
-        <div class="box">
-            <img src="pic10.jpg" alt="GAN Megaminx V2">
-            <p>GAN Megaminx V2 (Magnetic, MagLev, Ball-Core, UV Coated)</p>
-            <p class="price">₱4,285.64</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
-
-        <div class="box">
-            <img src="pic11.jpg" alt="QiYi 2x2x2 Mirror Cube Gold">
-            <p>QiYi 2x2x2 Mirror Cube Gold</p>
-            <p class="price">₱400.00</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
-
-        <div class="box">
-            <img src="pic12.jpg" alt="QiYi Mirror Cube 2x2 Silver">
-            <p>QiYi Mirror Cube 2x2 Silver</p>
-            <p class="price">₱400.00</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
-
-        <div class="box">
-            <img src="pic13.jpg" alt="QiYi 3x3x3 Gear Cube">
-            <p>QiYi 3x3x3 Gear Cube</p>
-            <p class="price">₱600.00</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
-
-        <div class="box">
-            <img src="pic14.jpg" alt="YJ Fisher Cube V3">
-            <p>YJ Fisher Cube V3</p>
-            <p class="price">₱445.00</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
-
-        <div class="box">
-            <img src="pic15.jpg" alt="ShengShou Mirror Cube 3x3 Gold">
-            <p>ShengShou Mirror Cube 3x3 Gold</p>
-            <p class="price">₱509.03</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
-
-        <div class="box">
-            <img src="pic16.jpg" alt="ShengShou Mirror Cube 3x3 Silver">
-            <p>ShengShou Mirror Cube 3x3 Silver</p>
-            <p class="price">₱509.03</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
-
-        <div class="box">
-            <img src="pic17.jpg" alt="QiYi Ivy Skewb Rubik Cube">
-            <p>QiYi Ivy Skewb Rubik Cube</p>
-            <p class="price">₱444.36</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
-
-        <div class="box">
-            <img src="pic18.jpg" alt="MoYu Ivy Cube">
-            <p>MoYu Ivy Cube</p>
-            <p class="price">₱500.00</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
-
-        <div class="box">
-            <img src="pic19.jpg" alt="GAN 11 M Pro UV Speed Cube 3x3 Magnetic">
-            <p>GAN 11 M Pro UV Speed Cube 3x3 Magnetic</p>
-            <p class="price">₱2,958.44</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
-
-        <div class="box">
-            <img src="pic20.jpg" alt="QiYi Axis 3x3 S">
-            <p>QiYi Axis 3x3 S</p>
-            <p class="price">₱380.32</p>
-            <a href="Contact.html" class="prodbutn">Buy Now</a>
-        </div>
-
     </div>
+
+    <!-- Login Validation -->
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            var validUsername = "jess";
+            var validPassword = "12345";
+
+            if (
+                username === validUsername &&
+                password === validPassword
+            ) {
+                window.location.href = "index.html";
+                return false;
+            } else {
+                alert("Invalid Username or Password");
+                return false;
+            }
+        }
+    </script>
 
 </body>
 </html>
-
+```
