@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,30 +18,31 @@
             color: #1e293b;
         }
 
-        /* Navigation Bar */
+        /* Navigation Bar - Same as Home and About */
         .navbox {
             display: flex;
+            gap: 12px;
             justify-content: center;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            background-color: #172554;
             padding: 18px 15px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+            flex-wrap: wrap;
+            background-color: #172554;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
         }
 
         .button,
         .btn {
-            border: 1px solid #475569;
-            color: white;
+            color: #ffffff;
             padding: 10px 20px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 15px;
+            font-size: 16px;
+            margin: 4px 2px;
             border-radius: 8px;
-            transition: background-color 0.3s ease,
-                        transform 0.3s ease;
+            border: 1px solid #475569;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
         .button {
@@ -49,7 +51,8 @@
 
         .button:hover {
             background-color: #2563eb;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .btn {
@@ -59,7 +62,8 @@
 
         .btn:hover {
             background-color: #991b1b;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         /* Contact Form Container */
@@ -131,24 +135,17 @@
             background-color: #1e40af;
         }
 
-        /* Logout */
-        .Logout {
-            display: flex;
-            justify-content: center;
-            margin-top: 25px;
-        }
-
         /* Mobile Responsive */
         @media screen and (max-width: 600px) {
             .navbox {
-                gap: 8px;
-                padding: 15px 10px;
+                gap: 5px;
+                padding: 12px 8px;
             }
 
-            .button {
-                flex: 1 1 40%;
-                padding: 11px 8px;
+            .button,
+            .btn {
                 font-size: 14px;
+                padding: 8px 12px;
             }
 
             .container {
@@ -160,10 +157,6 @@
             h2 {
                 font-size: 26px;
                 margin-bottom: 25px;
-            }
-
-            .btn {
-                width: 100%;
             }
 
             input[type="text"],
@@ -182,8 +175,10 @@
                 font-size: 23px;
             }
 
-            .button {
+            .button,
+            .btn {
                 font-size: 13px;
+                padding: 8px 10px;
             }
         }
     </style>
